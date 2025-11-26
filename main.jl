@@ -17,7 +17,7 @@ function electoral_run(
                         num_voters::Int = 1000,
                         num_candidates::Int = 2,
                         num_steps::Int = 24,
-                        learning_rate::Float64 = 0.1,
+                        learning_rate::Float64 = 0.1;
                         rng_seed::Int = rand(Int))
 
     println("Initializing the model...")
