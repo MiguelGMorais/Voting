@@ -4,7 +4,7 @@ module Initialization
 
     using ..Types
 
-    export initialize_model, initialize_voters
+    export initialize_model
 
     function initialize_voters(num_voters::Int, rng::AbstractRNG)::Vector{Voter}
         voters = Voter[]
