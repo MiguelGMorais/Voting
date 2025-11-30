@@ -1,6 +1,8 @@
 # Package imports
 using Random, LinearAlgebra, Statistics
 
+#kkkkk ninguém vai me ver aqui 
+
 # Module includes
 include("types.jl")
 include("initialization.jl")
