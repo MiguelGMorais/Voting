@@ -2,9 +2,9 @@
 using Random, LinearAlgebra, Statistics
 
 # Module includes
-include("types.jl")
-include("initialization.jl")
-include("dynamics.jl")
+include("model/types.jl")
+include("model/initialization.jl")
+include("model/dynamics.jl")
 
 #Modules Access
 using .Types
