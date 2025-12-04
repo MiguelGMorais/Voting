@@ -13,12 +13,21 @@ module Initialization
         ideology_average = 0.0
         ideology_stddev = 0.3
 
+        voting_cost_average = 1.5
+        voting_cost_stddev = 0.05
+
         for i in 1:num_voters
 
             #ideology Component
             ideology_raw = randn(rng) * ideology_stddev + ideology_average
             ideology = clamp(ideology_raw, -1.0, 1.0)
-            push!(voters, Voter(i, ideology))
+
+            #voting_cost Component
+            voting_cost_raw = randn(rng) * voting_cost_stddev + voting_cost_average
+            voting_cost = max(voting_cost_raw, 0.0)
+
+            #vector push
+            push!(voters, Voter(i, ideology, voting_cost))
         end
 
         return voters

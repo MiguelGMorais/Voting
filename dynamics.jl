@@ -23,11 +23,13 @@ module Dynamics
             for candidate in model.candidates
                 distance = abs(voter.ideology - candidate.platform)
 
-                utility = -distance
+                utility = -distance + 2
 
-                if utility > best_utility
-                    best_utility = utility
-                    best_candidate = candidate
+                if utility >= voter.voting_cost
+                    if utility > best_utility
+                        best_utility = utility
+                        best_candidate = candidate
+                    end
                 end
             end
 

@@ -5,6 +5,7 @@ module Types
     mutable struct Voter
         id::Int                 # Identity
         ideology::Float64       # Component: Ideological Position in [-1, 1]
+        voting_cost::Float64    # Component: Costing of voting
         
     end
 
