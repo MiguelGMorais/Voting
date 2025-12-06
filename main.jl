@@ -5,11 +5,13 @@ using Random, LinearAlgebra, Statistics
 include("model/types.jl")
 include("model/initialization.jl")
 include("model/dynamics.jl")
+include("visualization/graphics.jl")
 
 #Modules Access
 using .Types
 using .Initialization
 using .Dynamics
+using .Graphics
 
 # Main Execution
 
@@ -48,3 +50,6 @@ end
 
 # Run the electoral simulation
 final_model, platform_history, votes_history = electoral_run()
+
+# Visualization 
+plot_votes(votes_history)
